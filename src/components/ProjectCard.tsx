@@ -6,25 +6,25 @@ import { safeTrack } from '../lib/analytics'
 // On-theme "plate" for the card's left column. The demo placeholder art was a
 // dark raster that fought the light editorial theme; this is a light,
 // generated figure instead — a hairline panel with a faint diagonal hatch, the
-// project index set large, and the repo slug as a mono caption. It always
-// matches the theme and needs no image asset.
+// project index set large, and the repo slug as a mono caption. It stretches to
+// fill the column height so cards with more text don't leave an awkward gap.
 function CardPlate({ index, slug, category }: Pick<Project, 'index' | 'slug' | 'category'>) {
   return (
     <div
       aria-hidden
-      className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-line"
+      className="relative min-h-[132px] w-full flex-1 overflow-hidden rounded-lg border border-line"
       style={{
         backgroundImage:
           'repeating-linear-gradient(135deg, var(--color-surface) 0 7px, var(--color-page) 7px 14px)',
       }}
     >
-      <span className="absolute right-3 top-1.5 font-display text-[52px] font-semibold leading-none tracking-tighter text-ink/[0.07]">
-        {index}
-      </span>
-      <span className="absolute left-3 top-2.5 font-mono text-[9px] font-medium uppercase tracking-[0.12em] text-muted/80">
+      <span className="absolute left-3.5 top-3 font-mono text-[9.5px] font-medium uppercase tracking-[0.14em] text-muted/80">
         {category}
       </span>
-      <span className="absolute bottom-2.5 left-3 right-3 truncate font-mono text-[11px] text-muted">
+      <span className="absolute inset-0 flex items-center justify-center font-display text-[64px] font-semibold leading-none tracking-tighter text-ink/[0.08]">
+        {index}
+      </span>
+      <span className="absolute bottom-3 left-3.5 right-3.5 truncate font-mono text-[11px] text-muted">
         {slug}
       </span>
     </div>
@@ -34,14 +34,14 @@ function CardPlate({ index, slug, category }: Pick<Project, 'index' | 'slug' | '
 /**
  * Project card: generated plate + GitHub link on the left, info column on the
  * right with index/category, title, ownership tag, description, an impact
- * callout, and tech/feature pills.
+ * line, and tech/feature pills.
  */
 export function ProjectCard({ project }: { project: Project }) {
   const { index, category, slug, title, ownership, description, impact, pills, github } = project
 
   return (
-    <article className="card-glow flex flex-col gap-5 rounded-xl border border-line bg-page p-5 transition-colors sm:flex-row sm:gap-6 sm:p-6">
-      <div className="flex flex-col gap-3 sm:w-[210px] sm:shrink-0">
+    <article className="card-glow flex flex-col gap-5 rounded-xl border border-line bg-page p-5 transition-colors sm:flex-row sm:gap-7 sm:p-6">
+      <div className="flex flex-col gap-3 sm:w-[190px] sm:shrink-0">
         <CardPlate index={index} slug={slug} category={category} />
         {github && (
           <a
@@ -64,7 +64,7 @@ export function ProjectCard({ project }: { project: Project }) {
         </div>
 
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-          <h3 className="font-display text-xl font-semibold leading-snug tracking-[-0.01em] text-ink sm:text-[22px]">
+          <h3 className="font-display text-xl font-semibold leading-snug tracking-[-0.01em] text-ink sm:text-[23px]">
             {title}
           </h3>
           <OwnershipTag ownership={ownership} />
@@ -75,13 +75,13 @@ export function ProjectCard({ project }: { project: Project }) {
         </p>
 
         {impact && (
-          <p className="flex items-start gap-2.5 rounded-lg border border-line bg-surface/60 px-3.5 py-2.5 text-sm leading-relaxed text-ink">
+          <p className="flex items-start gap-2.5 text-sm leading-relaxed text-ink sm:text-[15px]">
             <span aria-hidden className="mt-px font-mono text-accent">→</span>
             <span className="font-medium">{impact}</span>
           </p>
         )}
 
-        <ul className="mt-0.5 flex flex-wrap gap-2">
+        <ul className="mt-1 flex flex-wrap gap-2">
           {pills.map((pill) => (
             <li
               key={pill}

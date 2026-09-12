@@ -35,22 +35,6 @@ export function AboutPane() {
           About
         </h2>
         <p className="text-[17px] leading-relaxed text-ink">{site.pitch}</p>
-
-        <div className="mt-1 flex flex-col gap-2.5 rounded-xl border border-line bg-surface/50 p-4 sm:flex-row sm:items-center sm:gap-4">
-          <span className="shrink-0 font-mono text-[10.5px] font-medium uppercase tracking-[0.13em] text-accent-ink">
-            Currently
-          </span>
-          <ul className="flex flex-wrap gap-2">
-            {site.currently.split('·').map((item) => (
-              <li
-                key={item}
-                className="rounded-full border border-accent/30 bg-accent-soft px-3 py-1 font-mono text-[12px] text-accent-ink"
-              >
-                {item.trim()}
-              </li>
-            ))}
-          </ul>
-        </div>
       </div>
 
       <div className="flex flex-col gap-4">
