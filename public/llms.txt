@@ -1,0 +1,15 @@
+# Rejul Mohan — personal portfolio
+
+> Single-page portfolio of Rejul Mohan: Production & Industrial Engineering
+> student at IIT Delhi building practical AI/ML (agents, local models,
+> grounded outputs). Projects, internship experience at Latinem (Sobha
+> Group's Global Capability Centre), skills, and contact links.
+
+## Sections
+
+- [Projects](https://github.com/r3jL): GitHub profile with all project repositories
+- [Agentic Onboarding Engine](https://github.com/r3jL/Agentic-Onboarding-Engine): adaptive onboarding platform on a local Qwen2.5 model
+- [Data Pipeline Orchestration Agent](https://github.com/r3jL/Data_Pipeline_Orchestration_Agent): NL-to-pipeline agent with failure replanning
+- [YourResource](https://github.com/r3jL/YourResource): resource-finding platform with classification and ranking
+- [LinkedIn](https://www.linkedin.com/in/rejul-mohan/): professional profile
+- [Email](mailto:me2252036@mech.iitd.ac.in): contact address

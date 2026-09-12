@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* Light "editorial" theme — matches demo-UI/Landing - Panel + Tabs.dc.html.
+   Near-white paper bg, warm-neutral ink, hairline borders, a single
+   restrained blue accent for interactive hover/active states. */
+@theme {
+  --color-page: #fafaf8;
+  --color-surface: #f1f1ec;
+  --color-ink: #16181c;
+  --color-muted: #5f646b;
+  --color-line: #e3e3dd;
+
+  --color-accent: oklch(0.52 0.12 252);
+  --color-accent-soft: oklch(0.95 0.03 252);
+  --color-accent-ink: oklch(0.45 0.11 252);
+
+  --font-display: "IBM Plex Sans", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas,
+    monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Focus visibility (PLAN E4.5) — visible ring on every interactive element. */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Card hover — subtle lift + hairline darken, pointer devices only (E4.4). */
+@media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
+  .card-glow {
+    transition:
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+  .card-glow:hover {
+    border-color: #c9c9c1;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Tab panel fade-in — only runs when a pane becomes visible, never hides
+     content without JS (progressive enhancement; content is in the DOM). */
+  .tabpanel {
+    animation: pane-in 0.4s ease both;
+  }
+  @keyframes pane-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}

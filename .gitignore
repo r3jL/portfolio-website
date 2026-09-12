@@ -1,2 +1,28 @@
+# planning docs — kept local, not for the public repo
 PRD.md
+PLAN.md
 
+# dependencies
+node_modules
+
+# build output
+dist
+dist-ssr
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# editor / OS
+.DS_Store
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.local

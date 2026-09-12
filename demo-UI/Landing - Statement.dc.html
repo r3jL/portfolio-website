@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"><style>html,body{margin:0;padding:0;background:#0D0E10;color:#F2F1EC;-webkit-font-smoothing:antialiased}*{box-sizing:border-box}a{color:#F2F1EC;text-decoration:none}a:hover{color:oklch(0.8 0.13 88)}button{font-family:inherit;cursor:pointer}::selection{background:oklch(0.8 0.13 88);color:#0D0E10}</style></helmet>
+
+<div style="min-height:100vh;display:flex;flex-direction:column;font-family:'Space Grotesk',system-ui,sans-serif;background:#0D0E10">
+
+<header style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;padding:20px clamp(20px,4vw,56px);border-bottom:1px solid #21232700;position:sticky;top:0;z-index:9;background:rgba(13,14,16,.86);backdrop-filter:blur(10px)">
+<button type="button" onClick="{{ goHome }}" style="display:flex;align-items:center;gap:10px;background:none;border:0;padding:0;color:#F2F1EC;font:600 15px 'Space Grotesk',sans-serif;letter-spacing:-0.01em">Rejul Mohan<span style="font:400 11px 'JetBrains Mono',monospace;color:#8A8B87">/ PIE, IIT Delhi</span></button>
+<nav style="display:flex;align-items:center;gap:4px">
+<button type="button" onClick="{{ goWork }}" style="position:relative;padding:8px 13px;background:none;border:0;color:#F2F1EC;font:400 13.5px 'JetBrains Mono',monospace;border-radius:5px" style-hover="background:#1A1C1F">work
+<sc-if value="{{ isWork }}"><span style="position:absolute;left:13px;right:13px;bottom:2px;height:1.5px;background:oklch(0.8 0.13 88)"></span></sc-if>
+</button>
+<button type="button" onClick="{{ goAbout }}" style="position:relative;padding:8px 13px;background:none;border:0;color:#F2F1EC;font:400 13.5px 'JetBrains Mono',monospace;border-radius:5px" style-hover="background:#1A1C1F">about
+<sc-if value="{{ isAbout }}"><span style="position:absolute;left:13px;right:13px;bottom:2px;height:1.5px;background:oklch(0.8 0.13 88)"></span></sc-if>
+</button>
+<a href="mailto:rejul@example.com" style="padding:8px 14px;margin-left:6px;border:1px solid #2C2F33;border-radius:5px;font:400 13.5px 'JetBrains Mono',monospace" style-hover="border-color:oklch(0.8 0.13 88);color:oklch(0.8 0.13 88)">contact</a>
+</nav>
+</header>
+
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<main style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:clamp(28px,4vw,46px);padding:clamp(44px,7vw,96px) clamp(20px,4vw,56px)">
+<div style="display:flex;align-items:center;gap:10px;font:500 11px 'JetBrains Mono',monospace;letter-spacing:.14em;color:#8A8B87"><span style="width:7px;height:7px;border-radius:50%;background:oklch(0.75 0.15 152);flex:none"></span>OPEN TO SUMMER 2027 INTERNSHIPS</div>
+<h1 style="margin:0;font:600 clamp(38px,7.2vw,90px)/1.02 'Space Grotesk',sans-serif;letter-spacing:-0.035em;max-width:19ch;text-wrap:pretty">Building at the intersection of software, AI &amp; engineering.</h1>
+<div style="display:flex;flex-wrap:wrap;gap:clamp(20px,4vw,60px);align-items:flex-start">
+<p style="margin:0;flex:1 1 300px;max-width:52ch;font:400 clamp(15px,1.5vw,18px)/1.6 'Space Grotesk',sans-serif;color:#B6B7B2;text-wrap:pretty">Production &amp; Industrial Engineering at IIT Delhi, spending most of my time on practical AI — agents that finish real tasks, local models, and output you can check against a source. Previously an AI engineering intern.</p>
+<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+<button type="button" onClick="{{ goWork }}" style="padding:14px 22px;background:#F2F1EC;color:#0D0E10;border:0;border-radius:6px;font:500 15px 'Space Grotesk',sans-serif" style-hover="background:oklch(0.8 0.13 88)">See the work →</button>
+<a href="#" style="padding:14px 20px;border:1px solid #2C2F33;border-radius:6px;font:400 14px 'JetBrains Mono',monospace" style-hover="border-color:#5A5D62">résumé ↓</a>
+</div>
+</div>
+</main>
+<footer style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding:18px clamp(20px,4vw,56px);border-top:1px solid #212327;font:400 12px 'JetBrains Mono',monospace;color:#8A8B87">
+<div style="display:flex;gap:20px;flex-wrap:wrap"><a href="mailto:rejul@example.com" style="color:#8A8B87">email</a><a href="#" style="color:#8A8B87">github</a><a href="#" style="color:#8A8B87">linkedin</a></div>
+<div>currently: agents · local models · grounded outputs</div>
+</footer>
+</sc-if>
+
+<sc-if value="{{ isWork }}">
+<main style="flex:1;padding:clamp(34px,5vw,64px) clamp(20px,4vw,56px);display:flex;flex-direction:column;gap:clamp(26px,3vw,40px);max-width:1180px;width:100%">
+<div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px">
+<h2 style="margin:0;font:600 clamp(28px,4vw,44px)/1.05 'Space Grotesk',sans-serif;letter-spacing:-0.03em">Work</h2>
+<p style="margin:0;max-width:46ch;font:400 14.5px/1.6 'Space Grotesk',sans-serif;color:#B6B7B2;text-wrap:pretty">Three projects I took end to end, plus the internship work. Everything below is public code.</p>
+</div>
+
+<article style="display:flex;flex-wrap:wrap;gap:clamp(18px,3vw,40px);padding-top:26px;border-top:1px solid #212327">
+<div style="flex:1 1 260px;min-width:0;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:baseline;gap:12px;font:400 12px 'JetBrains Mono',monospace;color:#8A8B87"><span style="color:oklch(0.8 0.13 88)">01</span>AI PLATFORM · 2026</div>
+<h3 style="margin:0;font:600 clamp(21px,2.6vw,29px)/1.15 'Space Grotesk',sans-serif;letter-spacing:-0.024em">Onboarding &amp; skill-gap platform</h3>
+<p style="margin:0;font:400 15px/1.6 'Space Grotesk',sans-serif;color:#B6B7B2;max-width:50ch;text-wrap:pretty">Reads a new hire's résumé against a role's real artifacts and turns the delta into a week-by-week ramp plan — retrieval over internal docs, every recommendation cited back to a source.</p>
+<div style="display:flex;flex-wrap:wrap;gap:7px">
+<span style="padding:4px 10px;border:1px solid #2C2F33;border-radius:20px;font:400 11.5px 'JetBrains Mono',monospace;color:#B6B7B2">Python</span><span style="padding:4px 10px;border:1px solid #2C2F33;border-radius:20px;font:400 11.5px 'JetBrains Mono',monospace;color:#B6B7B2">FastAPI</span><span style="padding:4px 10px;border:1px solid #2C2F33;border-radius:20px;font:400 11.5px 'JetBrains Mono',monospace;color:#B6B7B2">RAG</span><span style="padding:4px 10px;border:1px solid #2C2F33;border-radius:20px;font:400 11.5px 'JetBrains Mono',monospace;color:#B6B7B2">pgvector</span>
+</div>
+<div style="display:flex;gap:18px;font:400 12.5px 'JetBrains Mono',monospace;color:#8A8B87"><a href="#" style="color:#8A8B87">repo ↗</a><a href="#" style="color:#8A8B87">demo ↗</a></div>
+</div>
+<div style="flex:1 1 320px;min-width:0;aspect-ratio:16/10;border:1px solid #212327;border-radius:8px;background:repeating-linear-gradient(135deg,#141619 0 8px,#0D0E10 8px 16px);display:flex;align-items:flex-end;padding:14px"><span style="font:400 11px 'JetBrains Mono',monospace;color:#71736F">product shot — skill-gap dashboard</span></div>
+</article>
+
+<article style="display:flex;flex-wrap:wrap;gap:clamp(18px,3vw,40px);padding-top:26px;border-top:1px solid #212327">
+<div style="flex:1 1 260px;min-width:0;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:baseline;gap:12px;font:400 12px 'JetBrains Mono',monospace;color:#8A8B87"><span style="color:oklch(0.8 0.13 88)">02</span>AGENTS · 2025</div>
+<h3 style="margin:0;font:600 clamp(21px,2.6vw,29px)/1.15 'Space Grotesk',sans-serif;letter-spacing:-0.024em">Autonomous data-pipeline orchestrator</h3>
+<p style="margin:0;font:400 15px/1.6 'Space Grotesk',sans-serif;color:#B6B7B2;max-width:50ch;text-wrap:pretty">An agent that owns a pipeline: watches runs, reads the failure, proposes a patch, re-runs only what's downstream. Hard token budget and a dry-run gate before any production write.</p>
+<div style="display:flex;flex-wrap:wrap;gap:7px">
+<span style="padding:4px 10px;border:1px solid #2C2F33;border-radius:20px;font:400 11.5px 'JetBrains Mono',monospace;color:#B6B7B2">Python</span><span style="padding:4px 10px;border:1px solid #2C2F33;border-radius:20px;font:400 11.5px 'JetBrains Mono',monospace;color:#B6B7B2">Airflow</span><span style="padding:4px 10px;border:1px solid #2C2F33;border-radius:20px;font:400 11.5px 'JetBrains Mono',monospace;color:#B6B7B2">LangGraph</span><span style="padding:4px 10px;border:1px solid #2C2F33;border-radius:20px;font:400 11.5px 'JetBrains Mono',monospace;color:#B6B7B2">Docker</span>
+</div>
+<div style="display:flex;gap:18px;font:400 12.5px 'JetBrains Mono',monospace;color:#8A8B87"><a href="#" style="color:#8A8B87">repo ↗</a><a href="#" style="color:#8A8B87">write-up ↗</a></div>
+</div>
+<div style="flex:1 1 320px;min-width:0;aspect-ratio:16/10;border:1px solid #212327;border-radius:8px;background:repeating-linear-gradient(135deg,#141619 0 8px,#0D0E10 8px 16px);display:flex;align-items:flex-end;padding:14px"><span style="font:400 11px 'JetBrains Mono',monospace;color:#71736F">run graph — agent recovering a failed DAG</span></div>
+</article>
+
+<article style="display:flex;flex-wrap:wrap;gap:clamp(18px,3vw,40px);padding-top:26px;border-top:1px solid #212327">
+<div style="flex:1 1 260px;min-width:0;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:baseline;gap:12px;font:400 12px 'JetBrains Mono',monospace;color:#8A8B87"><span style="color:oklch(0.8 0.13 88)">03</span>FULL STACK · 2025</div>
+<h3 style="margin:0;font:600 clamp(21px,2.6vw,29px)/1.15 'Space Grotesk',sans-serif;letter-spacing:-0.024em">Resource-discovery platform</h3>
+<p style="margin:0;font:400 15px/1.6 'Space Grotesk',sans-serif;color:#B6B7B2;max-width:50ch;text-wrap:pretty">Threaded, vote-ranked resource sharing for coursework and side projects — time-decayed ranking, full-text search over 2k+ submissions, and the moderation plumbing that keeps it usable.</p>
+<div style="display:flex;flex-wrap:wrap;gap:7px">
+<span style="padding:4px 10px;border:1px solid #2C2F33;border-radius:20px;font:400 11.5px 'JetBrains Mono',monospace;color:#B6B7B2">TypeScript</span><span style="padding:4px 10px;border:1px solid #2C2F33;border-radius:20px;font:400 11.5px 'JetBrains Mono',monospace;color:#B6B7B2">Node</span><span style="padding:4px 10px;border:1px solid #2C2F33;border-radius:20px;font:400 11.5px 'JetBrains Mono',monospace;color:#B6B7B2">PostgreSQL</span><span style="padding:4px 10px;border:1px solid #2C2F33;border-radius:20px;font:400 11.5px 'JetBrains Mono',monospace;color:#B6B7B2">Next.js</span>
+</div>
+<div style="display:flex;gap:18px;font:400 12.5px 'JetBrains Mono',monospace;color:#8A8B87"><a href="#" style="color:#8A8B87">repo ↗</a><a href="#" style="color:#8A8B87">live ↗</a></div>
+</div>
+<div style="flex:1 1 320px;min-width:0;aspect-ratio:16/10;border:1px solid #212327;border-radius:8px;background:repeating-linear-gradient(135deg,#141619 0 8px,#0D0E10 8px 16px);display:flex;align-items:flex-end;padding:14px"><span style="font:400 11px 'JetBrains Mono',monospace;color:#71736F">feed view — ranked resource threads</span></div>
+</article>
+
+<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;padding:22px 24px;border:1px solid #212327;border-radius:10px;background:#111316">
+<div style="font:400 15px/1.5 'Space Grotesk',sans-serif;color:#B6B7B2;max-width:44ch;text-wrap:pretty">Internship work — three sub-projects on grounded retrieval — lives on the about page.</div>
+<button type="button" onClick="{{ goAbout }}" style="padding:12px 18px;background:none;border:1px solid #2C2F33;border-radius:6px;color:#F2F1EC;font:400 13.5px 'JetBrains Mono',monospace" style-hover="border-color:oklch(0.8 0.13 88);color:oklch(0.8 0.13 88)">experience →</button>
+</div>
+</main>
+</sc-if>
+
+<sc-if value="{{ isAbout }}">
+<main style="flex:1;padding:clamp(34px,5vw,64px) clamp(20px,4vw,56px);display:flex;flex-direction:column;gap:clamp(30px,4vw,52px);max-width:900px;width:100%">
+<div style="display:flex;flex-direction:column;gap:16px">
+<h2 style="margin:0;font:600 clamp(28px,4vw,44px)/1.05 'Space Grotesk',sans-serif;letter-spacing:-0.03em">About</h2>
+<p style="margin:0;font:400 clamp(16px,1.7vw,19px)/1.6 'Space Grotesk',sans-serif;color:#F2F1EC;max-width:58ch;text-wrap:pretty">I came into IIT Delhi through Production &amp; Industrial Engineering — systems, constraints, making processes actually run — and found the same problems waiting in software.</p>
+<p style="margin:0;font:400 15.5px/1.7 'Space Grotesk',sans-serif;color:#B6B7B2;max-width:62ch;text-wrap:pretty">Most of my time now goes to practical AI: agents that complete a task rather than demo one, local models where privacy or cost rules out an API, and output you can trace to a source. The engineering degree still shows — I'd rather measure a thing than claim it works.</p>
+</div>
+
+<section style="display:flex;flex-direction:column;gap:20px">
+<div style="font:500 11px 'JetBrains Mono',monospace;letter-spacing:.14em;color:#8A8B87">EXPERIENCE</div>
+<div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px;padding-bottom:14px;border-bottom:1px solid #212327">
+<div style="display:flex;flex-direction:column;gap:5px"><h3 style="margin:0;font:600 22px/1.2 'Space Grotesk',sans-serif;letter-spacing:-0.02em">AI Engineering Intern</h3><div style="font:400 14.5px 'Space Grotesk',sans-serif;color:#B6B7B2">Company Name · New Delhi</div></div>
+<div style="font:400 12.5px 'JetBrains Mono',monospace;color:#8A8B87">May — Jul 2025</div>
+</div>
+<p style="margin:0;font:400 15px/1.65 'Space Grotesk',sans-serif;color:#B6B7B2;max-width:60ch;text-wrap:pretty">Three pieces of one problem: getting a language model to answer from the company's own data without inventing anything.</p>
+<div style="display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;flex-direction:column;gap:8px;padding-left:18px;border-left:2px solid #2C2F33">
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px"><h4 style="margin:0;font:500 16.5px 'Space Grotesk',sans-serif">Grounded retrieval service</h4><span style="padding:3px 9px;border-radius:20px;background:#1A1C1F;font:400 11px 'JetBrains Mono',monospace;color:#B6B7B2">solo</span></div>
+<p style="margin:0;font:400 14.5px/1.6 'Space Grotesk',sans-serif;color:#9C9E9A;max-width:58ch;text-wrap:pretty">Chunking, hybrid search, and a citation layer that declines to answer below a confidence threshold. Now the retrieval backend behind two internal tools.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;padding-left:18px;border-left:2px solid oklch(0.8 0.13 88)">
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px"><h4 style="margin:0;font:500 16.5px 'Space Grotesk',sans-serif">Evaluation harness</h4><span style="padding:3px 9px;border-radius:20px;background:oklch(0.32 0.06 88);font:400 11px 'JetBrains Mono',monospace;color:oklch(0.88 0.09 88)">partnered · team of 2</span></div>
+<p style="margin:0;font:400 14.5px/1.6 'Space Grotesk',sans-serif;color:#9C9E9A;max-width:58ch;text-wrap:pretty">Built with another intern: a labelled question set and automated faithfulness/coverage scoring wired into CI, so regressions show up on the PR. I owned scoring and the CI integration; my partner built the dataset.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;padding-left:18px;border-left:2px solid #2C2F33">
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px"><h4 style="margin:0;font:500 16.5px 'Space Grotesk',sans-serif">On-prem model deployment</h4><span style="padding:3px 9px;border-radius:20px;background:#1A1C1F;font:400 11px 'JetBrains Mono',monospace;color:#B6B7B2">solo</span></div>
+<p style="margin:0;font:400 14.5px/1.6 'Space Grotesk',sans-serif;color:#9C9E9A;max-width:58ch;text-wrap:pretty">Benchmarked quantised open models against the hosted API on the team's own eval set, then packaged the winner behind the same interface — same quality on internal Q&amp;A, no data leaving the network.</p>
+</div>
+</div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:16px">
+<div style="font:500 11px 'JetBrains Mono',monospace;letter-spacing:.14em;color:#8A8B87">SKILLS — WHAT THE WORK ACTUALLY USED</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:18px">
+<div style="display:flex;flex-direction:column;gap:9px;padding-top:14px;border-top:1px solid #F2F1EC"><div style="font:500 14.5px 'Space Grotesk',sans-serif">Languages</div><div style="font:400 13.5px/1.75 'JetBrains Mono',monospace;color:#9C9E9A">Python<br>TypeScript<br>SQL<br>C++</div></div>
+<div style="display:flex;flex-direction:column;gap:9px;padding-top:14px;border-top:1px solid #F2F1EC"><div style="font:500 14.5px 'Space Grotesk',sans-serif">AI / ML</div><div style="font:400 13.5px/1.75 'JetBrains Mono',monospace;color:#9C9E9A">RAG &amp; retrieval<br>agent loops<br>local / quantised models<br>eval harnesses</div></div>
+<div style="display:flex;flex-direction:column;gap:9px;padding-top:14px;border-top:1px solid #F2F1EC"><div style="font:500 14.5px 'Space Grotesk',sans-serif">Backend</div><div style="font:400 13.5px/1.75 'JetBrains Mono',monospace;color:#9C9E9A">FastAPI · Node<br>PostgreSQL · pgvector<br>Airflow<br>Docker · Actions</div></div>
+</div>
+</section>
+
+<section style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px;padding-top:16px;border-top:1px solid #212327">
+<div style="display:flex;flex-direction:column;gap:4px"><div style="font:500 16px 'Space Grotesk',sans-serif">B.Tech, Production &amp; Industrial Engineering</div><div style="font:400 14px 'Space Grotesk',sans-serif;color:#B6B7B2">Indian Institute of Technology Delhi</div></div>
+<div style="font:400 12.5px 'JetBrains Mono',monospace;color:#8A8B87">2023 — 2027</div>
+</section>
+
+<section style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:24px;border-radius:10px;background:#111316;border:1px solid #212327">
+<div style="flex:1 1 240px;font:400 16px/1.5 'Space Grotesk',sans-serif;text-wrap:pretty">Hiring for an AI or backend internship?</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+<a href="mailto:rejul@example.com" style="padding:12px 18px;background:#F2F1EC;color:#0D0E10;border-radius:6px;font:500 14px 'Space Grotesk',sans-serif" style-hover="background:oklch(0.8 0.13 88)">rejul@example.com</a>
+<a href="#" style="padding:12px 16px;border:1px solid #2C2F33;border-radius:6px;font:400 13.5px 'JetBrains Mono',monospace" style-hover="border-color:#5A5D62">github ↗</a>
+<a href="#" style="padding:12px 16px;border:1px solid #2C2F33;border-radius:6px;font:400 13.5px 'JetBrains Mono',monospace" style-hover="border-color:#5A5D62">linkedin ↗</a>
+</div>
+</section>
+</main>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;startPage&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;work&quot;,&quot;about&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Behavior&quot;}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { page: props.startPage || 'home' };
+  }
+  go(page) { return () => { this.setState({ page }); if (typeof window !== 'undefined') window.scrollTo(0, 0); }; }
+  renderVals() {
+    const p = this.state.page;
+    return {
+      isHome: p === 'home', isWork: p === 'work', isAbout: p === 'about',
+      goHome: this.go('home'), goWork: this.go('work'), goAbout: this.go('about')
+    };
+  }
+}
+</script>
+</body>
+</html>

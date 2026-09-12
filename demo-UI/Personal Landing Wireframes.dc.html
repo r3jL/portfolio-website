@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet"><style>body{margin:0;background:#f0eee9;font-family:system-ui,sans-serif}a{color:#2a78d6}a:hover{color:#1b5aa8}.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}.dv-opts{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55);max-width:640px}.dv-card{max-width:100%;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden}.dv-opt:target .dv-oid{background:#2a78d6;color:#fff}.dv-next{margin:22px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}</style></helmet>
+
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Four multipage structures — landing page + where the depth lives</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="1a">
+<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Editorial landing → deep project pages. Home is a short pitch + three big project cards; every card opens its own case-study page. Recruiter skims home in 20s, clicks one thing.</div>
+<div class="dv-card" style="width:640px;padding:22px;display:flex;flex-direction:column;gap:18px">
+
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font:400 10px ui-monospace,Menlo,monospace;color:#6b6862"><div style="padding:3px 9px;border:1.5px solid #1a1a1a;border-radius:3px;color:#1a1a1a">/</div><div>→</div><div style="padding:3px 9px;border:1.5px dashed #9a978f;border-radius:3px">/work/onboarding-ai</div><div style="padding:3px 9px;border:1.5px dashed #9a978f;border-radius:3px">/work/pipeline-agent</div><div style="padding:3px 9px;border:1.5px dashed #9a978f;border-radius:3px">/work/discovery</div><div style="padding:3px 9px;border:1.5px dashed #9a978f;border-radius:3px">/about</div></div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="font:400 10px ui-monospace,monospace;color:#8a877f">HOME  /</div>
+<div style="border:1.5px solid #1a1a1a;border-radius:5px;overflow:hidden;background:#fdfdfc">
+<div style="display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border-bottom:1.5px solid #1a1a1a"><div style="font:400 12px 'Architects Daughter',cursive">RM</div><div style="display:flex;gap:9px;font:400 9.5px ui-monospace,monospace;color:#6b6862"><div>Work</div><div>About</div><div>Contact</div></div></div>
+<div style="padding:16px 14px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="font:400 22px/1.1 'Architects Daughter',cursive">Rejul Mohan</div>
+<div style="height:6px;background:#d8d5cf;border-radius:3px"></div>
+<div style="height:6px;background:#d8d5cf;border-radius:3px;width:72%"></div>
+<div style="font:400 10px/1.4 'Architects Daughter',cursive;color:#8a877f">identity line — PIE @ IIT Delhi, software + AI + engineering</div>
+<div style="display:flex;gap:6px;margin-top:2px"><div style="padding:5px 11px;background:#1a1a1a;color:#fff;border-radius:3px;font:400 9.5px ui-monospace,monospace">Résumé</div><div style="padding:5px 11px;border:1.5px solid #1a1a1a;border-radius:3px;font:400 9.5px ui-monospace,monospace">Email</div></div>
+</div>
+<div style="height:1.5px;background:repeating-linear-gradient(90deg,#c9c6bf 0 6px,transparent 6px 12px)"></div>
+<div style="display:flex;flex-direction:column;gap:9px">
+<div style="font:400 9px ui-monospace,monospace;letter-spacing:.14em;color:oklch(0.55 0.16 250)">SELECTED WORK</div>
+<div style="border:1.5px solid #1a1a1a;border-radius:4px;padding:10px;display:flex;gap:10px"><div style="width:56px;height:40px;border:1.5px solid #c9c6bf;border-radius:3px;background:repeating-linear-gradient(45deg,#eceae5 0 5px,#fff 5px 10px)"></div><div style="flex:1;display:flex;flex-direction:column;gap:5px"><div style="font:400 12px 'Architects Daughter',cursive">Onboarding &amp; skill-gap AI</div><div style="height:5px;background:#d8d5cf;border-radius:3px"></div><div style="height:5px;background:#d8d5cf;border-radius:3px;width:60%"></div></div></div>
+<div style="border:1.5px solid #1a1a1a;border-radius:4px;padding:10px;display:flex;gap:10px"><div style="width:56px;height:40px;border:1.5px solid #c9c6bf;border-radius:3px;background:repeating-linear-gradient(45deg,#eceae5 0 5px,#fff 5px 10px)"></div><div style="flex:1;display:flex;flex-direction:column;gap:5px"><div style="font:400 12px 'Architects Daughter',cursive">Pipeline orchestration agent</div><div style="height:5px;background:#d8d5cf;border-radius:3px"></div><div style="height:5px;background:#d8d5cf;border-radius:3px;width:52%"></div></div></div>
+<div style="border:1.5px solid #1a1a1a;border-radius:4px;padding:10px;display:flex;gap:10px"><div style="width:56px;height:40px;border:1.5px solid #c9c6bf;border-radius:3px;background:repeating-linear-gradient(45deg,#eceae5 0 5px,#fff 5px 10px)"></div><div style="flex:1;display:flex;flex-direction:column;gap:5px"><div style="font:400 12px 'Architects Daughter',cursive">Resource discovery platform</div><div style="height:5px;background:#d8d5cf;border-radius:3px"></div><div style="height:5px;background:#d8d5cf;border-radius:3px;width:64%"></div></div></div>
+</div>
+<div style="height:1.5px;background:repeating-linear-gradient(90deg,#c9c6bf 0 6px,transparent 6px 12px)"></div>
+<div style="display:flex;flex-direction:column;gap:7px">
+<div style="font:400 9px ui-monospace,monospace;letter-spacing:.14em;color:oklch(0.55 0.16 250)">EXPERIENCE</div>
+<div style="display:flex;justify-content:space-between;font:400 11px 'Architects Daughter',cursive"><div>AI Intern · Company</div><div style="color:#8a877f;font-size:9.5px">2025 →</div></div>
+<div style="height:5px;background:#d8d5cf;border-radius:3px;width:80%"></div>
+</div>
+<div style="display:flex;gap:6px;padding-top:4px;border-top:1.5px solid #eceae5"><div style="flex:1;padding:7px 0;text-align:center;border:1.5px solid #1a1a1a;border-radius:3px;font:400 9.5px ui-monospace,monospace">Email</div><div style="flex:1;padding:7px 0;text-align:center;border:1.5px solid #1a1a1a;border-radius:3px;font:400 9.5px ui-monospace,monospace">GitHub</div><div style="flex:1;padding:7px 0;text-align:center;border:1.5px solid #1a1a1a;border-radius:3px;font:400 9.5px ui-monospace,monospace">LinkedIn</div></div>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="font:400 10px ui-monospace,monospace;color:#8a877f">PROJECT PAGE  /work/…</div>
+<div style="border:1.5px solid #1a1a1a;border-radius:5px;overflow:hidden;background:#fdfdfc">
+<div style="display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border-bottom:1.5px solid #1a1a1a"><div style="font:400 9.5px ui-monospace,monospace;color:#6b6862">← back to work</div><div style="font:400 9.5px ui-monospace,monospace;color:#6b6862">repo ↗</div></div>
+<div style="padding:16px 14px;display:flex;flex-direction:column;gap:13px">
+<div style="display:flex;flex-direction:column;gap:7px"><div style="font:400 18px/1.15 'Architects Daughter',cursive">Onboarding &amp; skill-gap AI</div><div style="display:flex;gap:5px"><div style="padding:2px 7px;border:1px solid #c9c6bf;border-radius:9px;font:400 9px ui-monospace,monospace;color:#6b6862">Python</div><div style="padding:2px 7px;border:1px solid #c9c6bf;border-radius:9px;font:400 9px ui-monospace,monospace;color:#6b6862">RAG</div><div style="padding:2px 7px;border:1px solid #c9c6bf;border-radius:9px;font:400 9px ui-monospace,monospace;color:#6b6862">FastAPI</div></div></div>
+<div style="height:96px;border:1.5px dashed #9a978f;border-radius:4px;background:repeating-linear-gradient(45deg,#eceae5 0 6px,#fff 6px 12px);display:flex;align-items:center;justify-content:center;font:400 9.5px ui-monospace,monospace;color:#8a877f">product shot / demo gif</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+<div style="border-top:1.5px solid #1a1a1a;padding-top:6px;display:flex;flex-direction:column;gap:4px"><div style="font:400 8.5px ui-monospace,monospace;color:#8a877f">ROLE</div><div style="height:5px;background:#d8d5cf;border-radius:3px"></div></div>
+<div style="border-top:1.5px solid #1a1a1a;padding-top:6px;display:flex;flex-direction:column;gap:4px"><div style="font:400 8.5px ui-monospace,monospace;color:#8a877f">STACK</div><div style="height:5px;background:#d8d5cf;border-radius:3px"></div></div>
+<div style="border-top:1.5px solid #1a1a1a;padding-top:6px;display:flex;flex-direction:column;gap:4px"><div style="font:400 8.5px ui-monospace,monospace;color:#8a877f">STATUS</div><div style="height:5px;background:#d8d5cf;border-radius:3px"></div></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:5px"><div style="font:400 9px ui-monospace,monospace;letter-spacing:.14em;color:oklch(0.55 0.16 250)">PROBLEM</div><div style="height:5px;background:#d8d5cf;border-radius:3px"></div><div style="height:5px;background:#d8d5cf;border-radius:3px;width:88%"></div></div>
+<div style="display:flex;flex-direction:column;gap:5px"><div style="font:400 9px ui-monospace,monospace;letter-spacing:.14em;color:oklch(0.55 0.16 250)">HOW IT WORKS</div><div style="height:5px;background:#d8d5cf;border-radius:3px"></div><div style="height:5px;background:#d8d5cf;border-radius:3px"></div><div style="height:5px;background:#d8d5cf;border-radius:3px;width:70%"></div><div style="height:56px;border:1.5px dashed #9a978f;border-radius:4px;margin-top:4px;display:flex;align-items:center;justify-content:center;font:400 9px ui-monospace,monospace;color:#8a877f">architecture diagram</div></div>
+<div style="display:flex;flex-direction:column;gap:5px"><div style="font:400 9px ui-monospace,monospace;letter-spacing:.14em;color:oklch(0.55 0.16 250)">RESULT</div><div style="height:5px;background:#d8d5cf;border-radius:3px;width:76%"></div></div>
+<div style="display:flex;justify-content:space-between;align-items:center;padding-top:8px;border-top:1.5px solid #eceae5;font:400 10px 'Architects Daughter',cursive;color:#55524c"><div>← Prev project</div><div>Next project →</div></div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="1b">
+<div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Terminal-flavoured index. Home is a dense mono "manifest" — one screen, no scroll on desktop; nav is a ⌘K palette. Signals engineer first, designer second.</div>
+<div class="dv-card" style="width:640px;padding:22px;display:flex;flex-direction:column;gap:18px">
+
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font:400 10px ui-monospace,Menlo,monospace;color:#6b6862"><div style="padding:3px 9px;border:1.5px solid #1a1a1a;border-radius:3px;color:#1a1a1a">/</div><div>→</div><div style="padding:3px 9px;border:1.5px dashed #9a978f;border-radius:3px">/projects</div><div style="padding:3px 9px;border:1.5px dashed #9a978f;border-radius:3px">/projects/[slug]</div><div style="padding:3px 9px;border:1.5px dashed #9a978f;border-radius:3px">/experience</div><div style="padding:3px 9px;border:1.5px dashed #9a978f;border-radius:3px">/now</div></div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="font:400 10px ui-monospace,monospace;color:#8a877f">HOME  /  (one screen)</div>
+<div style="border:1.5px solid #1a1a1a;border-radius:5px;overflow:hidden;background:#111;color:#e8e6e1">
+<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-bottom:1.5px solid #3a3a38;font:400 9.5px ui-monospace,monospace;color:#8a877f"><div>rejul.dev</div><div style="padding:2px 7px;border:1px solid #4a4a48;border-radius:3px">⌘K</div></div>
+<div style="padding:18px 14px;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;flex-direction:column;gap:7px">
+<div style="font:400 10px ui-monospace,monospace;color:oklch(0.72 0.16 160)">$ whoami</div>
+<div style="font:400 24px/1.1 'Architects Daughter',cursive;color:#fff">rejul mohan</div>
+<div style="height:5px;background:#3a3a38;border-radius:3px"></div>
+<div style="height:5px;background:#3a3a38;border-radius:3px;width:66%"></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="font:400 10px ui-monospace,monospace;color:oklch(0.72 0.16 160)">$ ls projects/</div>
+<div style="display:flex;flex-direction:column;gap:6px;font:400 10px ui-monospace,monospace">
+<div style="display:flex;justify-content:space-between;gap:10px;padding-bottom:5px;border-bottom:1px dashed #3a3a38"><div style="color:#e8e6e1">onboarding-ai/</div><div style="color:#8a877f">py · rag</div></div>
+<div style="display:flex;justify-content:space-between;gap:10px;padding-bottom:5px;border-bottom:1px dashed #3a3a38"><div style="color:#e8e6e1">pipeline-agent/</div><div style="color:#8a877f">agents</div></div>
+<div style="display:flex;justify-content:space-between;gap:10px;padding-bottom:5px;border-bottom:1px dashed #3a3a38"><div style="color:#e8e6e1">discovery/</div><div style="color:#8a877f">node · pg</div></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:7px">
+<div style="font:400 10px ui-monospace,monospace;color:oklch(0.72 0.16 160)">$ cat experience.md</div>
+<div style="height:5px;background:#3a3a38;border-radius:3px;width:88%"></div>
+<div style="height:5px;background:#3a3a38;border-radius:3px;width:60%"></div>
+</div>
+<div style="display:flex;gap:12px;font:400 10px ui-monospace,monospace;color:#8a877f;padding-top:6px;border-top:1px solid #3a3a38"><div>email</div><div>github</div><div>linkedin</div><div>résumé</div></div>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="font:400 10px ui-monospace,monospace;color:#8a877f">PROJECTS INDEX  /projects  + ⌘K</div>
+<div style="border:1.5px solid #1a1a1a;border-radius:5px;overflow:hidden;background:#111;color:#e8e6e1;position:relative">
+<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-bottom:1.5px solid #3a3a38;font:400 9.5px ui-monospace,monospace;color:#8a877f"><div>/projects</div><div>4 repos</div></div>
+<div style="padding:14px;display:flex;flex-direction:column;gap:9px">
+<div style="display:flex;gap:6px;font:400 9px ui-monospace,monospace"><div style="padding:3px 8px;border:1px solid #6a6a66;border-radius:12px;color:#e8e6e1">all</div><div style="padding:3px 8px;border:1px solid #3a3a38;border-radius:12px;color:#8a877f">ai</div><div style="padding:3px 8px;border:1px solid #3a3a38;border-radius:12px;color:#8a877f">backend</div><div style="padding:3px 8px;border:1px solid #3a3a38;border-radius:12px;color:#8a877f">agents</div></div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="border:1px solid #3a3a38;border-radius:4px;padding:10px;display:flex;flex-direction:column;gap:5px"><div style="display:flex;justify-content:space-between;font:400 11px 'Architects Daughter',cursive"><div>onboarding-ai</div><div style="font:400 9px ui-monospace,monospace;color:#8a877f">★ 24</div></div><div style="height:4px;background:#3a3a38;border-radius:2px"></div><div style="height:4px;background:#3a3a38;border-radius:2px;width:64%"></div></div>
+<div style="border:1px solid #3a3a38;border-radius:4px;padding:10px;display:flex;flex-direction:column;gap:5px"><div style="display:flex;justify-content:space-between;font:400 11px 'Architects Daughter',cursive"><div>pipeline-agent</div><div style="font:400 9px ui-monospace,monospace;color:#8a877f">★ 11</div></div><div style="height:4px;background:#3a3a38;border-radius:2px"></div><div style="height:4px;background:#3a3a38;border-radius:2px;width:52%"></div></div>
+<div style="border:1px solid #3a3a38;border-radius:4px;padding:10px;display:flex;flex-direction:column;gap:5px"><div style="display:flex;justify-content:space-between;font:400 11px 'Architects Daughter',cursive"><div>discovery</div><div style="font:400 9px ui-monospace,monospace;color:#8a877f">★ 7</div></div><div style="height:4px;background:#3a3a38;border-radius:2px"></div><div style="height:4px;background:#3a3a38;border-radius:2px;width:70%"></div></div>
+</div>
+</div>
+<div style="position:absolute;left:16px;right:16px;top:94px;background:#1c1c1b;border:1.5px solid oklch(0.72 0.16 160);border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,.5);overflow:hidden">
+<div style="padding:9px 11px;border-bottom:1px solid #3a3a38;font:400 10px ui-monospace,monospace;color:#8a877f">› go to…</div>
+<div style="padding:6px 0;font:400 10px ui-monospace,monospace">
+<div style="padding:6px 11px;background:#2a2a28;color:#fff">projects / onboarding-ai</div>
+<div style="padding:6px 11px;color:#a8a5a0">experience</div>
+<div style="padding:6px 11px;color:#a8a5a0">résumé.pdf</div>
+<div style="padding:6px 11px;color:#a8a5a0">contact</div>
+</div>
+</div>
+</div>
+<div style="font:400 10px/1.4 'Architects Daughter',cursive;color:#8a877f">⌘K palette = the whole nav; also filter by tag</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="1c">
+<div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Split hero + tabbed body. Fixed left identity panel; right side swaps between Work / Experience / About without a page load. Feels like a product, still deep-linkable.</div>
+<div class="dv-card" style="width:640px;padding:22px;display:flex;flex-direction:column;gap:18px">
+
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font:400 10px ui-monospace,Menlo,monospace;color:#6b6862"><div style="padding:3px 9px;border:1.5px solid #1a1a1a;border-radius:3px;color:#1a1a1a">/</div><div>→</div><div style="padding:3px 9px;border:1.5px dashed #9a978f;border-radius:3px">/work</div><div style="padding:3px 9px;border:1.5px dashed #9a978f;border-radius:3px">/experience</div><div style="padding:3px 9px;border:1.5px dashed #9a978f;border-radius:3px">/about</div><div style="font:400 9.5px ui-monospace,monospace">(same shell, right pane swaps)</div></div>
+
+<div style="display:flex;flex-direction:column;gap:14px">
+
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="font:400 10px ui-monospace,monospace;color:#8a877f">SHELL — tab: WORK</div>
+<div style="border:1.5px solid #1a1a1a;border-radius:5px;overflow:hidden;background:#fdfdfc;display:grid;grid-template-columns:220px 1fr">
+<div style="padding:18px 16px;border-right:1.5px solid #1a1a1a;display:flex;flex-direction:column;gap:14px;background:#f6f5f2">
+<div style="font:400 22px/1.1 'Architects Daughter',cursive">Rejul<br>Mohan</div>
+<div style="display:flex;flex-direction:column;gap:5px"><div style="height:5px;background:#d8d5cf;border-radius:3px"></div><div style="height:5px;background:#d8d5cf;border-radius:3px;width:82%"></div><div style="height:5px;background:#d8d5cf;border-radius:3px;width:58%"></div></div>
+<div style="font:400 9.5px/1.4 ui-monospace,monospace;color:#8a877f">identity line + one-sentence focus</div>
+<div style="display:flex;flex-direction:column;gap:6px;margin-top:auto;font:400 10px ui-monospace,monospace;color:#6b6862"><div>email ↗</div><div>github ↗</div><div>linkedin ↗</div><div style="padding:5px 10px;background:#1a1a1a;color:#fff;border-radius:3px;width:fit-content">Résumé ↓</div></div>
+</div>
+<div style="display:flex;flex-direction:column">
+<div style="display:flex;gap:0;border-bottom:1.5px solid #1a1a1a;font:400 10px ui-monospace,monospace"><div style="padding:9px 14px;border-right:1.5px solid #1a1a1a;background:#1a1a1a;color:#fff">Work</div><div style="padding:9px 14px;border-right:1.5px solid #1a1a1a;color:#6b6862">Experience</div><div style="padding:9px 14px;color:#6b6862">About</div></div>
+<div style="padding:14px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+<div style="border:1.5px solid #1a1a1a;border-radius:4px;overflow:hidden"><div style="height:52px;border-bottom:1.5px solid #c9c6bf;background:repeating-linear-gradient(45deg,#eceae5 0 6px,#fff 6px 12px)"></div><div style="padding:9px;display:flex;flex-direction:column;gap:5px"><div style="font:400 11.5px 'Architects Daughter',cursive">Onboarding &amp; skill-gap AI</div><div style="height:4px;background:#d8d5cf;border-radius:2px"></div><div style="height:4px;background:#d8d5cf;border-radius:2px;width:66%"></div></div></div>
+<div style="border:1.5px solid #1a1a1a;border-radius:4px;overflow:hidden"><div style="height:52px;border-bottom:1.5px solid #c9c6bf;background:repeating-linear-gradient(45deg,#eceae5 0 6px,#fff 6px 12px)"></div><div style="padding:9px;display:flex;flex-direction:column;gap:5px"><div style="font:400 11.5px 'Architects Daughter',cursive">Pipeline agent</div><div style="height:4px;background:#d8d5cf;border-radius:2px"></div><div style="height:4px;background:#d8d5cf;border-radius:2px;width:58%"></div></div></div>
+<div style="border:1.5px solid #1a1a1a;border-radius:4px;overflow:hidden"><div style="height:52px;border-bottom:1.5px solid #c9c6bf;background:repeating-linear-gradient(45deg,#eceae5 0 6px,#fff 6px 12px)"></div><div style="padding:9px;display:flex;flex-direction:column;gap:5px"><div style="font:400 11.5px 'Architects Daughter',cursive">Resource discovery</div><div style="height:4px;background:#d8d5cf;border-radius:2px"></div><div style="height:4px;background:#d8d5cf;border-radius:2px;width:72%"></div></div></div>
+<div style="border:1.5px dashed #9a978f;border-radius:4px;display:flex;align-items:center;justify-content:center;min-height:100px;font:400 10px 'Architects Daughter',cursive;color:#8a877f;text-align:center;padding:8px">4th project<br>or “more on GitHub →”</div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="font:400 10px ui-monospace,monospace;color:#8a877f">SAME SHELL — tab: EXPERIENCE (internship + its three sub-projects)</div>
+<div style="border:1.5px solid #1a1a1a;border-radius:5px;overflow:hidden;background:#fdfdfc;display:grid;grid-template-columns:220px 1fr">
+<div style="padding:18px 16px;border-right:1.5px solid #1a1a1a;background:#f6f5f2;display:flex;align-items:flex-start"><div style="font:400 13px/1.3 'Architects Daughter',cursive;color:#8a877f">(identity panel<br>unchanged)</div></div>
+<div style="display:flex;flex-direction:column">
+<div style="display:flex;border-bottom:1.5px solid #1a1a1a;font:400 10px ui-monospace,monospace"><div style="padding:9px 14px;border-right:1.5px solid #1a1a1a;color:#6b6862">Work</div><div style="padding:9px 14px;border-right:1.5px solid #1a1a1a;background:#1a1a1a;color:#fff">Experience</div><div style="padding:9px 14px;color:#6b6862">About</div></div>
+<div style="padding:14px;display:flex;flex-direction:column;gap:11px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><div style="font:400 15px 'Architects Daughter',cursive">AI Intern · Company</div><div style="font:400 9.5px ui-monospace,monospace;color:#8a877f">2025 · 3 mo</div></div>
+<div style="height:5px;background:#d8d5cf;border-radius:3px;width:90%"></div>
+<div style="display:flex;flex-direction:column;gap:9px;padding-left:12px;border-left:1.5px solid #d8d5cf">
+<div style="display:flex;flex-direction:column;gap:4px"><div style="font:400 12px 'Architects Daughter',cursive">Sub-project 1</div><div style="height:4px;background:#d8d5cf;border-radius:2px;width:88%"></div></div>
+<div style="display:flex;flex-direction:column;gap:4px"><div style="display:flex;align-items:baseline;gap:7px"><div style="font:400 12px 'Architects Daughter',cursive">Sub-project 2</div><div style="padding:1px 6px;border:1px solid oklch(0.55 0.16 250);border-radius:9px;font:400 8.5px ui-monospace,monospace;color:oklch(0.55 0.16 250)">team of 2</div></div><div style="height:4px;background:#d8d5cf;border-radius:2px;width:80%"></div></div>
+<div style="display:flex;flex-direction:column;gap:4px"><div style="font:400 12px 'Architects Daughter',cursive">Sub-project 3</div><div style="height:4px;background:#d8d5cf;border-radius:2px;width:72%"></div></div>
+</div>
+<div style="display:flex;gap:5px"><div style="padding:2px 7px;border:1px solid #c9c6bf;border-radius:9px;font:400 9px ui-monospace,monospace;color:#6b6862">LLMs</div><div style="padding:2px 7px;border:1px solid #c9c6bf;border-radius:9px;font:400 9px ui-monospace,monospace;color:#6b6862">eval</div><div style="padding:2px 7px;border:1px solid #c9c6bf;border-radius:9px;font:400 9px ui-monospace,monospace;color:#6b6862">Python</div></div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="1d">
+<div class="dv-olabel"><a class="dv-oid" href="#1d">1d</a>Full-bleed statement landing. Home is one bold screen — name, focus, three links — and everything else is a separate page. Highest first-impression, lowest information on page one.</div>
+<div class="dv-card" style="width:640px;padding:22px;display:flex;flex-direction:column;gap:18px">
+
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font:400 10px ui-monospace,Menlo,monospace;color:#6b6862"><div style="padding:3px 9px;border:1.5px solid #1a1a1a;border-radius:3px;color:#1a1a1a">/</div><div>→</div><div style="padding:3px 9px;border:1.5px dashed #9a978f;border-radius:3px">/work</div><div style="padding:3px 9px;border:1.5px dashed #9a978f;border-radius:3px">/work/[slug]</div><div style="padding:3px 9px;border:1.5px dashed #9a978f;border-radius:3px">/about</div><div style="padding:3px 9px;border:1.5px dashed #9a978f;border-radius:3px">/contact</div></div>
+
+<div style="display:flex;flex-direction:column;gap:14px">
+
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="font:400 10px ui-monospace,monospace;color:#8a877f">HOME  /  (100vh, no scroll)</div>
+<div style="border:1.5px solid #1a1a1a;border-radius:5px;overflow:hidden;background:#fdfdfc">
+<div style="display:flex;justify-content:space-between;align-items:center;padding:10px 16px;font:400 10px ui-monospace,monospace;color:#6b6862"><div style="color:#1a1a1a">Rejul Mohan</div><div style="display:flex;gap:12px"><div>Work</div><div>About</div><div>Contact</div></div></div>
+<div style="padding:34px 20px 30px;display:flex;flex-direction:column;gap:18px;min-height:190px;justify-content:center">
+<div style="font:400 40px/1.05 'Architects Daughter',cursive;max-width:460px">Building at the intersection of software, AI &amp; engineering.</div>
+<div style="display:flex;flex-direction:column;gap:5px;max-width:380px"><div style="height:6px;background:#d8d5cf;border-radius:3px"></div><div style="height:6px;background:#d8d5cf;border-radius:3px;width:62%"></div></div>
+<div style="display:flex;gap:8px;align-items:center"><div style="padding:8px 16px;background:#1a1a1a;color:#fff;border-radius:3px;font:400 10px ui-monospace,monospace">See the work →</div><div style="font:400 10px ui-monospace,monospace;color:#6b6862">résumé · github · linkedin</div></div>
+</div>
+<div style="border-top:1.5px solid #1a1a1a;padding:10px 16px;display:flex;justify-content:space-between;font:400 9.5px ui-monospace,monospace;color:#8a877f"><div>Production &amp; Industrial Engineering, IIT Delhi</div><div>currently: agents, local models, grounded outputs</div></div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="font:400 10px ui-monospace,monospace;color:#8a877f">WORK  /work</div>
+<div style="border:1.5px solid #1a1a1a;border-radius:5px;overflow:hidden;background:#fdfdfc">
+<div style="padding:12px 14px;border-bottom:1.5px solid #1a1a1a;font:400 13px 'Architects Daughter',cursive">Work</div>
+<div style="display:flex;flex-direction:column">
+<div style="padding:12px 14px;border-bottom:1px dashed #c9c6bf;display:flex;flex-direction:column;gap:5px"><div style="display:flex;justify-content:space-between;font:400 12.5px 'Architects Daughter',cursive"><div>Onboarding &amp; skill-gap AI</div><div style="font:400 9px ui-monospace,monospace;color:#8a877f">2026</div></div><div style="height:4px;background:#d8d5cf;border-radius:2px;width:84%"></div></div>
+<div style="padding:12px 14px;border-bottom:1px dashed #c9c6bf;display:flex;flex-direction:column;gap:5px"><div style="display:flex;justify-content:space-between;font:400 12.5px 'Architects Daughter',cursive"><div>Pipeline orchestration agent</div><div style="font:400 9px ui-monospace,monospace;color:#8a877f">2025</div></div><div style="height:4px;background:#d8d5cf;border-radius:2px;width:70%"></div></div>
+<div style="padding:12px 14px;border-bottom:1px dashed #c9c6bf;display:flex;flex-direction:column;gap:5px"><div style="display:flex;justify-content:space-between;font:400 12.5px 'Architects Daughter',cursive"><div>Resource discovery</div><div style="font:400 9px ui-monospace,monospace;color:#8a877f">2025</div></div><div style="height:4px;background:#d8d5cf;border-radius:2px;width:76%"></div></div>
+<div style="padding:12px 14px;font:400 10px ui-monospace,monospace;color:#6b6862">Internship work →</div>
+</div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="font:400 10px ui-monospace,monospace;color:#8a877f">ABOUT  /about (about + skills + experience)</div>
+<div style="border:1.5px solid #1a1a1a;border-radius:5px;overflow:hidden;background:#fdfdfc">
+<div style="padding:12px 14px;border-bottom:1.5px solid #1a1a1a;font:400 13px 'Architects Daughter',cursive">About</div>
+<div style="padding:14px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;flex-direction:column;gap:5px"><div style="height:5px;background:#d8d5cf;border-radius:3px"></div><div style="height:5px;background:#d8d5cf;border-radius:3px"></div><div style="height:5px;background:#d8d5cf;border-radius:3px;width:56%"></div></div>
+<div style="display:flex;flex-direction:column;gap:7px"><div style="font:400 9px ui-monospace,monospace;letter-spacing:.14em;color:oklch(0.55 0.16 250)">SKILLS</div><div style="display:grid;grid-template-columns:66px 1fr;gap:6px 10px;align-items:center;font:400 10px 'Architects Daughter',cursive;color:#55524c"><div>Languages</div><div style="height:5px;background:#d8d5cf;border-radius:3px;width:80%"></div><div>AI / ML</div><div style="height:5px;background:#d8d5cf;border-radius:3px;width:92%"></div><div>Backend</div><div style="height:5px;background:#d8d5cf;border-radius:3px;width:64%"></div></div></div>
+<div style="display:flex;flex-direction:column;gap:7px"><div style="font:400 9px ui-monospace,monospace;letter-spacing:.14em;color:oklch(0.55 0.16 250)">EXPERIENCE</div><div style="font:400 11.5px 'Architects Daughter',cursive">AI Intern · Company · 2025</div><div style="height:4px;background:#d8d5cf;border-radius:2px;width:88%"></div><div style="height:4px;background:#d8d5cf;border-radius:2px;width:70%"></div></div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: "take <a class="dv-oid" href="#1a">1a</a>'s home but <a class="dv-oid" href="#1b">1b</a>'s dark mono type" · "show mobile for <a class="dv-oid" href="#1c">1c</a>" · "flesh <a class="dv-oid" href="#1d">1d</a> out into a hi-fi page"</p>
+</section>
+</x-dc>
+</body>
+</html>
