@@ -23,7 +23,7 @@ export function IdentityPanel() {
               {availability}
             </div>
 
-            <h1 className="font-display text-4xl font-semibold leading-[1.02] tracking-[-0.02em] text-ink sm:text-[44px]">
+            <h1 className="font-display text-[40px] font-semibold leading-[1.02] tracking-[-0.02em] text-ink sm:text-[50px]">
               {name}
             </h1>
 

@@ -18,8 +18,6 @@ export interface Project {
   description: string
   /** Impact or outcome line (qualitative is fine). */
   impact?: string
-  /** Image path (relative to /public). */
-  image?: string
   /** Tech/behaviour labels — derived only from words already in the PRD
    *  description. Never invent metrics or stack items. */
   pills: string[]
