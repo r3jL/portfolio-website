@@ -41,7 +41,7 @@ export function ProjectCard({ project }: { project: Project }) {
 
   return (
     <article className="card-glow flex flex-col gap-5 rounded-xl border border-line bg-page p-5 transition-colors sm:flex-row sm:gap-7 sm:p-6">
-      <div className="flex flex-col gap-3 sm:w-[190px] sm:shrink-0">
+      <div className="flex flex-col items-start gap-3 sm:w-[250px] sm:shrink-0">
         <CardPlate index={index} slug={slug} category={category} />
         {github && (
           <a
